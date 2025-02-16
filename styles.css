@@ -1,0 +1,101 @@
+body {
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-container input {
+  width: 50%;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+}
+
+.search-container button {
+  padding: 10px 15px;
+  border-radius: 50%;
+  border: none;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.weather-card {
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  padding: 20px;
+  width: 350px;
+  margin: 20px auto;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  color:#89253e;
+  font-weight: bold;
+}
+
+.weather-card img {
+  width: 100px;
+}
+
+/* .city-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.city-card img {
+  width: 50px;
+} */
+
+.city-card {
+  background: linear-gradient(to right, #3a6186, #89253e); /* Stylish gradient */
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin: 10px 0;
+  text-align: center;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.city-card h5 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.city-card p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.city-card .btn {
+  background-color: #ff4b5c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.city-card .btn:hover {
+  background-color: #d43f52;
+}
+
+.city-card:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.3);
+}
+

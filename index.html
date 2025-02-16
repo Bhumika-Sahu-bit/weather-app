@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="container text-center mt-5">
+        <!-- Search Box -->
+        <div class="search-container">
+            <input type="text" id="search-input" class="form-control" placeholder="Enter city name">
+            <button id="search-btn" class="btn btn-primary">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <!-- Weather Card (Initially Hidden) -->
+        <div id="weather-container" class="weather-card d-none">
+            <h2 id="city-name"></h2>
+            <img id="weather-icon" src="" alt="Weather Icon">
+            <p id="temperature"></p>
+            <p><i class="fas fa-tint"></i> <span id="humidity"></span> Humidity</p>
+            <p><i class="fas fa-wind"></i> <span id="wind-speed"></span> Wind Speed</p>
+            <button class="btn btn-success" id="add-favorite">Add to Favorites</button>
+        </div>
+
+        <!-- Favorite Cities -->
+        <h3 class="mt-4">Favorite Cities</h3>
+        <div id="favorite-cities" class="row mt-3 flex gap-4"></div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
