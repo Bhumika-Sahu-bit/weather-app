@@ -4,8 +4,7 @@ function fetchWeather() {
     const city = document.getElementById('search-input').value.trim();
     if (!city) return alert("Please enter a valid city name.");
 
-    const apiKey = '390a2ae81ab0465efb08b19afd456230';
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${config.WEATHER_API_KEY}&units=metric`)
         .then(response => response.json())
         .then(data => {
             if (data.cod !== 200) {
@@ -93,10 +92,8 @@ function displayFavorites() {
     const favContainer = document.getElementById('favorite-cities');
     favContainer.innerHTML = '';
 
-    const apiKey = '390a2ae81ab0465efb08b19afd456230';
-
     favorites.forEach(fav => {
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${fav.city}&appid=${apiKey}&units=metric`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${fav.city}&appid=${config.WEATHER_API_KEY}&units=metric`)
             .then(response => response.json())
             .then(data => {
                 if (data.cod !== 200) return;
